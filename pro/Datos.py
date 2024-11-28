@@ -67,7 +67,7 @@ def volcado_datos():
     conexion.commit()
     conexion.close()
 
-volcado_datos()
+
 
 def consultar_datos():
 
@@ -78,11 +78,8 @@ def consultar_datos():
     #Abrir cursor
     cursor = conexion.cursor(dictionary=True)
 
-    #Lista de elementos
-    lista = []
-
     #Script de consulta (SELECT)
-    script_consulta = "select * from perifericos "
+    script_consulta = "SELECT * FROM perifericos "
 
     #Ejecutar la consulta
     cursor.execute(script_consulta)
@@ -95,25 +92,47 @@ def consultar_datos():
 
     return lista
 
-consultar_datos()
 
-# def eliminar(id):
-#
-#     #Abrimos conexion
-#     conexion = conectar_bdd()
-#
-#     #Abir cursor
-#     cursor = conexion.cursor()
-#
-#     #Script Eliminar (DELETE FROM tabla where id = num)
-#     script_eliminar = "delete from perifericos where id =" + str(id)
-#
-#
-#     #Ejecutar script
-#     cursor.execute(script_eliminar)
-#
-#     #Cerramos conexion
-#     conexion.close()
-#
-#
-# eliminar()
+
+def eliminar(id):
+
+    #Abrimos conexion
+    conexion = conectar_bdd()
+
+    #Abir cursor
+    cursor = conexion.cursor()
+
+    #Script Eliminar (DELETE FROM tabla where id = num)
+    script_eliminar = "delete from perifericos where id =" + str(id)
+
+
+    #Ejecutar script
+    cursor.execute(script_eliminar)
+
+    #Cerramos conexion
+    conexion.close()
+
+
+
+def crear_nueva(nuevo_periferico):
+        conexion = conectar_bdd()
+        cursor = conexion.cursor()
+
+        # Sentencia de inserción
+        script_insercion = 'insert into perifericos (piezas,nombre,precio,precio_iva,imagen) values(%s,%s,%s,%s,%s)'
+
+        # Datos a insertar
+        nuevo_periferico = (
+            nuevo_periferico["Piezas"],
+            nuevo_periferico["Nombre"],
+            nuevo_periferico["Precio"],
+            nuevo_periferico["Precio_iva"],
+            nuevo_periferico["imagen"]
+        )
+
+        cursor.execute(script_insercion, nuevo_periferico)
+        conexion.commit()
+
+        cursor.close()
+        conexion.close()
+
