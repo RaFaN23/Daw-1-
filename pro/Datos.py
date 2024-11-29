@@ -136,3 +136,32 @@ def crear_nueva(nuevo_periferico):
         cursor.close()
         conexion.close()
 
+
+def actualizar_datos(caja_perifericos):
+    try:
+        # Abrimos conexion con la bbdd
+        conexion = conectar_bdd()
+        cursor = conexion.cursor()
+
+        # Sentencia UPDATE
+        script_actualizacion = "UPDATE perifericos SET piezas=%s, nombre=%s, precio=%s, precio_iva=%s, imagen=%s WHERE id=%s"
+
+        # Ejecutar actualización
+        cursor.execute(script_actualizacion, (
+            caja_perifericos["piezas"],
+            caja_perifericos["nombre"],
+            caja_perifericos["precio"],
+            caja_perifericos["precio_iva"],
+            caja_perifericos["imagen"],
+            caja_perifericos["id"]
+        ))
+
+        # Confirmar cambios
+        conexion.commit()
+
+        # Cerramos conexión
+        cursor.close()
+        conexion.close()
+    except Exception as e:
+        print(f"Error al actualizar datos en la base de datos: {e}")
+
