@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <div class="barra_nave">
+            <img class="logo" src="../img/Glovo_logo.png">
+            <div class="buscador_grande">
+                <img src="../img/busqueda.png" class="lupa">
+                <input  placeholder="Buscar" type="text">
+            </div>    
+            <button class="empezar">Empezar</button>
+        </div>
+        <div class="opciones">
+            <div class="supermercado">
+                <button class="botones_opciones">
+                    <img class="imagenes_opciones" src="../img/carritocompra.png">
+                    <p>Supermercado</p>
+                </button>
+            </div>
+            <div class="superglovo">
+                <button class="botones_opciones">
+                    <img class="imagenes_opciones" src="../img/bolsacompra.png">
+                    <p>El súper de Glovo</p>
+                </button>
+            </div>
+        </div>
+        <div class="pedidos">
+            <div class="filtros">
+               <div class="ordenar_por">
+                    <h3 class="tamaño_letra_1">Ordenar por</h3>
+                    <div class="css_filtros">
+                        <button> 
+                            <img src="../img/reloj-cinco.png" class="foto_filtros" >
+                            <h2 class="tamaño_letra_2">Cerca de mi</h2>
+                        </button>
+                    </div>
+                    <div class="css_filtros">
+                        <button> 
+                            <img src="../img/pulgares-hacia-arriba.png" class="foto_filtros" >
+                            <h2 class="tamaño_letra_2">Mejor Valorados</h2>
+                        </button>
+                    </div>
+                    <div class="css_filtros">
+                        <button> 
+                            <img src="../img/motocicleta.png" class="foto_filtros" >
+                            <h2 class="tamaño_letra_2">Precio de entrega</h2>
+                        </button>
+                    </div>
+               </div>
+               <div class="filtro_populares">
+                    <h3 class="tamaño_letra_1">Filtros polulares</h3>
+                    <div class="css_filtros">
+                        <button> 
+                            <img src="../img/dulces.png" class="foto_filtros" >
+                            <h2 class="tamaño_letra_2">Dulces</h2>
+                        </button>
+                    </div>
+                    <div class="css_filtros">
+                        <button> 
+                            <img src="../img/snacks.png" class="foto_filtros" >
+                            <h2 class="tamaño_letra_2">Snacks</h2>
+                        </button>
+                    </div>
+                    <div class="css_filtros">
+                        <button> 
+                            <img src="../img/supermercado.png" class="foto_filtros" >
+                            <h2 class="tamaño_letra_2">Supermercado</h2>
+                        </button>
+                    </div>
+               </div>
+               <div class="mas_filtros">
+                    <h3 class="tamaño_letra_1">Más filtros</h3>
+                    <div class="css_filtros">
+                        <button> 
+                            <img src="../img/alcohol.png" class="foto_filtros" >
+                            <h2 class="tamaño_letra_2">Alcohol</h2>
+                        </button>
+                    </div>
+                    <div class="css_filtros">
+                        <button> 
+                            <img src="../img/carniceria.png" class="foto_filtros" >
+                            <h2 class="tamaño_letra_2">Carniceria</h2>
+                        </button>
+                    </div>
+                    <div class="css_filtros">
+                        <button> 
+                            <img src="../img/congelado.png" class="foto_filtros" >
+                            <h2 class="tamaño_letra_2">Congelados</h2>
+                        </button>
+                    </div>
+                    <div class="css_filtros">
+                        <button> 
+                            <img src="../img/convivencia.png" class="foto_filtros" >
+                            <h2 class="tamaño_letra_2">Conveniencia</h2>
+                        </button>
+                    </div>
+                    <div class="css_filtros">
+                        <button> 
+                            <img src="../img/snacks.png" class="foto_filtros" >
+                            <h2 class="tamaño_letra_2">Desayuno</h2>
+                        </button>
+                    </div>
+               </div>
+            </div>  
+        </div>
+    </body>
+</html>
