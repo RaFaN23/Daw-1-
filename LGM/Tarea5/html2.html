@@ -1,39 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/style2.css">
-        <link rel="stylesheet" href="">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        
-        <div class="logo_registrar">
-            <div class="fondo_cabecera">
-                <img class="fondo_blur" src="../img/fondo.jpg" >
-            </div>
-            <img src="../img/Glovo_logo.png" >
-            <button class="empezar">Empezar</button>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../css/mob2.css">
+
+</head>
+
+<body>
+
+    <div class="logo_registrar">
+        <div class="fondo_cabecera">
+            <img class="fondo_blur" src="../img/fondo.jpg">
         </div>
-        <p><u>Sevilla</u> <span>&gt;</span> <u>Supermercado</u> <span>&gt;</span> <b>El Súper de Glovo</b></p>
-            
-        <div class="cuerpo_pricipal">
-            <div class="cuerpo_pricipal_izq"> 
-                <div class="cuerpo_pricipal_izq_arriba">
-                    <h2>El Súper de Glovo</h2>
-                    <div class="interior_superglovo">
-                        <img src="../img/motocicleta.png">
-                        <s>1,79 €</s>
-                        <p class="gratis">Gratis</p>
-                        <img src="../img/bolsacompra.png" >
-                        <p>Prime</p>
-                        <img src="../img/pulgares-hacia-arriba.png" >
-                        <p class="muy_bueno">Muy bueno</p>
+        <a href="../html/html"><img class="logo_prici" src="../img/Glovo_logo.png"></a>
+        <button class="empezar">Empezar</button>
+    </div>
+    <p>
+        <u>Sevilla</u> <span>&gt;</span> 
+        <a href="../html/html"><u>Supermercado</u></a>
+        <span>&gt;</span> 
+        <b>El Súper de Glovo</b>
+    </p>
+
+    <div class="cuerpo_pricipal">
+        <div class="cuerpo_pricipal_izq">
+            <div class="cuerpo_pricipal_izq_arriba">
+                <h1>El Súper de Glovo</h1>
+                <div class="interior_superglovo">
+                    <img class="Img_blanco_sup" src="../img/motocicleta.png">
+                    <s>1,79 €</s>
+                    <p class="gratis">Gratis</p>
+                    <img class="Img_blanco_sup" src="../img/bolsacompra.png">
+                    <p>Prime</p>
+                    <img class="Img_blanco_sup" src="../img/pulgares-hacia-arriba.png">
+                    <p class="muy_bueno">Muy bueno</p>
+                </div>
+                <p class="si">Te entragamos la compra del super, !En minutos¡</p>
+            </div>
+            <div class="cuerpo_pricipal_izq_abajo">
+                <div class="abajo_izq_1">
+                    <p class="secciones-titulo">Secciones</p>
+                    <ul class="flex column">
+                        <li class="li-abrir">Lo más vendido</li>
+                        <li class="li-abrir">Descuento <img src="../img/angulo-hacia-abajo.png" alt="abrir-contenido">
+                        </li>
+                        <li class="li-abrir">Destacado <img src="../img/angulo-hacia-abajo.png" alt="abrir-contenido">
+                        </li>
+                        <li class="li-abrir">Bebidas <img src="../img/angulo-hacia-abajo.png" alt="abrir-contenido">
+                        </li>
+                        <li class="li-abrir">Alcohol <img src="../img/angulo-hacia-abajo.png" alt="abrir-contenido">
+                        </li>
+                    </ul>
+                </div>
+                <div class="cupero_2">
+                    <div class="abajo_izq_2">
+                        <div id="lomasvendido-buscador" class="flex row v-center">
+                            <img src="../img/busqueda.png" alt="buscar">
+                            <input id="inp_buscar_superglovo" type="text" placeholder="Buscar en El Súper de Glovo">
+                        </div>
+                        <div id="lomasvendido-sindireccion">
+                            <img class="imagen_nodirec" src="../img/motocicleta.png">
+                            <div>
+                                <p>Sin tu dirección, <b>no podemos comprobar si este establecimiento realiza entregas en
+                                        tu zona.</b></p>
+                                <a class="clicaqui" href="">Haz clic aquí para añadir tu dirección</a>
+                            </div>
+                        </div>
+                        <div class="mas_vendido_titu">
+                            <div id="lomasvendido_titu">
+                                <div class="trofeo_titu">
+                                    <img id="lomasvendido-icon" src="../img/trofeo.png" alt="trofeo">
+                                    <p id="lomasvendido-titulo">Lo más vendido</p>
+                                </div>
+                                <div>
+                                    <img src="../img/flecha-derecha.svg" alt="Ir">
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
-                    <p>Te entragamos la compra del super, !En minutos¡</p>
+                    <div class="abajo_cards">
+                        <div class="card">
+                            <img class="img_cards" src="../img/benandjerrys-blanco.avif" alt="">
+                            <p class="amarillo">Ben&Jerry's Helado Cookie Dough...</p>
+                            <p class="amarillo">8,24€</p>
+                            <p class="amarillo"><s>9,15€</s></p>
+                        </div>
+                        <div class="card">
+                            <img class="img_cards" src="../img/cocacolazero.avif" alt="">
+                            <p class="amarillo">Pack de cocacolazero</p>
+                            <p class="amarillo">7,23€</p>
+                            <p class="amarillo"><s>9€</s></p>
+                        </div>
+                        <div class="card">
+                            <img class="img_cards" src="..//img/pizza4quesos.avif" alt="">
+                            <p class="amarillo">Pack de 2x1</p>
+                            <p class="amarillo">4€</p>
+                            <p class="amarillo"><s>5€</s></p>
+                        </div>
+                        <div class="card">
+                            <img class="img_cards" src="../img/pack-estrella-galicia.avif" alt="">
+                            <p class="amarillo">Pack de pack estrella galicia</p>
+                            <p class="amarillo">4€ (Aprende mercadona)</p>
+                            <p class="amarillo"><s>6€</s></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>
+        <div class="cuerpo_pricipal_derech">
+            <div id="superglovo-carrito" class="flex column h-center">
+                <div id="carrito-tuglovo" class="flex column v-center">
+                    <h2>Tu glovo</h2>
+                    <img class="astro" src="../img/astronauta.svg" alt="astronauta">
+                    <p>Todavía no has añadido ningún producto. Cuando lo hagas, ¡verás los productos aquí!</p>
+                </div>
+                <div id="carrito-llega" class="flex row h-center">
+                    <img src="../img/info.svg" alt="info">
+                    <p>¡Llega a <b>15,00 €</b> para no pagar el recargo de <b>3,49 €</b>!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
 </html>
