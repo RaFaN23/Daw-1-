@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/tablet.css">
+        <link rel="stylesheet" href="../css/mob.css">
     </head>
     <body>
         <div class="barra_nave">
@@ -33,19 +35,19 @@
                <div class="ordenar_por">
                     <h3 class="tamaño_letra_1">Ordenar por</h3>
                     <div class="css_filtros">
-                        <button> 
+                        <button class="botones_laterales_edit"> 
                             <img src="../img/reloj-cinco.png" class="foto_filtros" >
                             <h2 class="tamaño_letra_2">Cerca de mi</h2>
                         </button>
                     </div>
                     <div class="css_filtros">
-                        <button> 
+                        <button class="botones_laterales_edit"> 
                             <img src="../img/pulgares-hacia-arriba.png" class="foto_filtros" >
                             <h2 class="tamaño_letra_2">Mejor Valorados</h2>
                         </button>
                     </div>
                     <div class="css_filtros">
-                        <button> 
+                        <button class="botones_laterales_edit"> 
                             <img src="../img/motocicleta.png" class="foto_filtros" >
                             <h2 class="tamaño_letra_2">Precio de entrega</h2>
                         </button>
@@ -54,19 +56,19 @@
                <div class="filtro_populares">
                     <h3 class="tamaño_letra_1">Filtros polulares</h3>
                     <div class="css_filtros">
-                        <button> 
+                        <button class="botones_laterales_edit"> 
                             <img src="../img/dulces.png" class="foto_filtros" >
                             <h2 class="tamaño_letra_2">Dulces</h2>
                         </button>
                     </div>
                     <div class="css_filtros">
-                        <button> 
+                        <button class="botones_laterales_edit"> 
                             <img src="../img/snacks.png" class="foto_filtros" >
                             <h2 class="tamaño_letra_2">Snacks</h2>
                         </button>
                     </div>
                     <div class="css_filtros">
-                        <button> 
+                        <button class="botones_laterales_edit"> 
                             <img src="../img/supermercado.png" class="foto_filtros" >
                             <h2 class="tamaño_letra_2">Supermercado</h2>
                         </button>
@@ -75,37 +77,61 @@
                <div class="mas_filtros">
                     <h3 class="tamaño_letra_1">Más filtros</h3>
                     <div class="css_filtros">
-                        <button> 
+                        <button class="botones_laterales_edit"> 
                             <img src="../img/alcohol.png" class="foto_filtros" >
                             <h2 class="tamaño_letra_2">Alcohol</h2>
                         </button>
                     </div>
                     <div class="css_filtros">
-                        <button> 
+                        <button class="botones_laterales_edit"> 
                             <img src="../img/carniceria.png" class="foto_filtros" >
                             <h2 class="tamaño_letra_2">Carniceria</h2>
                         </button>
                     </div>
                     <div class="css_filtros">
-                        <button> 
+                        <button class="botones_laterales_edit"> 
                             <img src="../img/congelado.png" class="foto_filtros" >
                             <h2 class="tamaño_letra_2">Congelados</h2>
                         </button>
                     </div>
                     <div class="css_filtros">
-                        <button> 
+                        <button class="botones_laterales_edit"> 
                             <img src="../img/convivencia.png" class="foto_filtros" >
                             <h2 class="tamaño_letra_2">Conveniencia</h2>
                         </button>
                     </div>
                     <div class="css_filtros">
-                        <button> 
+                        <button class="botones_laterales_edit"> 
                             <img src="../img/snacks.png" class="foto_filtros" >
                             <h2 class="tamaño_letra_2">Desayuno</h2>
                         </button>
                     </div>
                </div>
             </div>  
+            <div class="opciones_restaurantes">
+                <div class="sevilla_princi"><p><u>Sevilla</u> <span>&gt;</span> <b>Supermercado</b></p></div>
+                <div class="carniceria_sub"> <h2>Carnicería a domicilio en Sevilla</h2></div>
+                <div class="cards">
+                    <div class="card">
+                        <img class="imagenes_cards" src="../img/carniceria_foto.png" >
+                        <br>
+                        <img class="icon_cards" src="../img/pulgares-hacia-arriba.png"> 
+                    </div>
+              
+                    <div class="card">
+                        <img class="imagenes_cards" src="../img/cap_2.png" >
+                        <br>
+                        <img class="icon_cards" src="../img/pulgares-hacia-arriba.png">
+                    </div>
+               
+                    <div class="card">
+                        <img class="imagenes_cards" src="../img/cap_3.png" >
+                        <br>
+                        <img class="icon_cards" src="../img/pulgares-hacia-arriba.png">
+                    </div>
+                </div>
+
+            </div>
         </div>
     </body>
 </html>
