@@ -1,0 +1,1 @@
+Folder para las imagenes
