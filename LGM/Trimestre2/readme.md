@@ -1,1 +1,1 @@
-Segundo trismetre de programacion
+Segundo trismetre de LGM
