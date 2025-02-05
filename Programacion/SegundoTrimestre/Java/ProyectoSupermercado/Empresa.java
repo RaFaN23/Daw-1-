@@ -42,12 +42,13 @@ public class Empresa {
     @Override
     public String toString() {
         return "Empresa{" +
-                "identificador=" + identificador +ºº
-        return ", codigoEmpresa='" + codigoEmpresa + '\'' +
-                ", empleados=" + empleados +
+                "identificador=" + identificador +
+                ", codigoEmpresa='" + codigoEmpresa + '\'' +
                 ", tipoEmpresa=" + tipoEmpresa +
+                ", empleados=" + (empleados != null ? empleados.size() : "null") + // Evitar recursión
                 '}';
     }
+
 
     @Override
     public boolean equals(Object o) {

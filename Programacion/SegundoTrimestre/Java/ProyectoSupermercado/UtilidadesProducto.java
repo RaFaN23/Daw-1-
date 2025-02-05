@@ -2,7 +2,7 @@ package utilidades;
 
 import modelos.Producto;
 import modelos.Almacen;
-import modelos.Producto.TipoProducto;
+import modelos.TipoProducto;
 
 import java.util.List;
 import java.util.stream.Collectors;

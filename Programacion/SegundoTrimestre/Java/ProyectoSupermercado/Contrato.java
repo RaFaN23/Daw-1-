@@ -7,26 +7,14 @@ public class Contrato {
     private double salarioBase;
     private TipoContrato tipoContrato;
 
-    public enum TipoContrato {
-        PRACTICAS, TEMPORAL, OBRAYSERVICIO, INDEFINIDO
-    }
-
     // Constructor vacío
-    public Contrato() {
-    }
+    public Contrato() {}
 
     // Constructor completo
     public Contrato(int identificador, double salarioBase, TipoContrato tipoContrato) {
         this.identificador = identificador;
         this.salarioBase = salarioBase;
         this.tipoContrato = tipoContrato;
-    }
-
-    // Constructor de copia
-    public Contrato(Contrato contrato) {
-        this.identificador = contrato.identificador;
-        this.salarioBase = contrato.salarioBase;
-        this.tipoContrato = contrato.tipoContrato;
     }
 
     // Getters y Setters
@@ -54,7 +42,7 @@ public class Contrato {
         this.tipoContrato = tipoContrato;
     }
 
-    // Método toString
+    // toString
     @Override
     public String toString() {
         return "Contrato{" +
@@ -64,16 +52,18 @@ public class Contrato {
                 '}';
     }
 
-    // Método equals
+    // equals
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Contrato contrato = (Contrato) o;
-        return identificador == contrato.identificador && Double.compare(contrato.salarioBase, salarioBase) == 0 && tipoContrato == contrato.tipoContrato;
+        return identificador == contrato.identificador &&
+                Double.compare(contrato.salarioBase, salarioBase) == 0 &&
+                tipoContrato == contrato.tipoContrato;
     }
 
-    // Método hashCode
+    // hashCode
     @Override
     public int hashCode() {
         return Objects.hash(identificador, salarioBase, tipoContrato);

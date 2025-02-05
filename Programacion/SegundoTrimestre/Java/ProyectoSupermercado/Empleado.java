@@ -1,5 +1,7 @@
 package modelos;
 
+import java.util.Objects;
+
 public class Empleado {
     private int identificador;
     private String dni;
@@ -65,10 +67,11 @@ public class Empleado {
                 ", apellidos='" + apellidos + '\'' +
                 ", direccion='" + direccion + '\'' +
                 ", numTelefono='" + numTelefono + '\'' +
-                ", empresa=" + empresa +
+                ", empresaId=" + (empresa != null ? empresa.getIdentificador() : "null") + // Evitar recursión
                 ", contrato=" + contrato +
                 '}';
     }
+
 
     @Override
     public boolean equals(Object o) {

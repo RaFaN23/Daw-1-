@@ -17,34 +17,34 @@ public class Almacen {
         this.capacidad = capacidad;
     }
 
-    // Métodos get y set
+    // Getters y Setters
     public int getIdentificador() { return identificador; }
     public void setIdentificador(int identificador) { this.identificador = identificador; }
-
     public String getNombre() { return nombre; }
     public void setNombre(String nombre) { this.nombre = nombre; }
-
     public int getCapacidad() { return capacidad; }
     public void setCapacidad(int capacidad) { this.capacidad = capacidad; }
 
     // Métodos toString, equals y hashcode
     @Override
     public String toString() {
-        return "Almacen [identificador=" + identificador + ", nombre=" + nombre + ", capacidad=" + capacidad + "]";
+        return "Almacen{" +
+                "identificador=" + identificador +
+                ", nombre='" + nombre + '\'' +
+                ", capacidad=" + capacidad +
+                '}';
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) return true;
-        if (obj == null || getClass() != obj.getClass()) return false;
-        Almacen almacen = (Almacen) obj;
-        return identificador == almacen.identificador &&
-                capacidad == almacen.capacidad &&
-                nombre.equals(almacen.nombre);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Almacen almacen = (Almacen) o;
+        return identificador == almacen.identificador;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(identificador, nombre, capacidad);
+        return Objects.hash(identificador);
     }
 }
