@@ -2,24 +2,30 @@ package utilidades;
 
 import modelos.Factura;
 import modelos.LineaFactura;
+
 import java.time.LocalDate;
 
 public class UtilidadesFactura {
-
-    public boolean esFacturaVencida(Factura factura) {
-        return factura.getFechaVencimiento().isBefore(LocalDate.now()) || factura.getFechaVencimiento().isEqual(LocalDate.now());
-    }
-
-    public double calcularBaseFactura(Factura factura) {
-        double baseFactura = 0;
-        for (LineaFactura linea : factura.getLineaFactura()) {
-            baseFactura += linea.getProducto().getPrecio() * linea.getCantidad();
+    public boolean esFacturaVencida(Factura factura){
+        if (factura.getFechaVencimiento().isBefore(LocalDate.now())==true)
+            System.out.println("La fecha de vencimiento es apta");
+        else {
+            System.out.println("La fecha de vencimiento no es apta");
         }
-        return baseFactura;
+        return esFacturaVencida(factura);
+    }
+    public double calcularBaseFactura(Factura factura){
+        double contador=0;
+        for(LineaFactura lineaFactura : factura.getLineaFactura()){
+            double precioProducto =lineaFactura.getProducto().getPrecio();
+            int cantidad=lineaFactura.getCantidad();
+            contador+=precioProducto*cantidad;
+        }
+        return calcularBaseFactura(factura);
     }
 
-    public double calcularTotalAPagar(Factura factura) {
-        double importeBase = calcularBaseFactura(factura);
-        return (importeBase - factura.getDescuento()) * factura.getIva();
+    public double calcularTotalAPagar(Factura factura){
+        double totalAPagar = (factura.getImporteBase() - factura.getDescuento()) * factura.getIva();
+        return totalAPagar;
     }
 }

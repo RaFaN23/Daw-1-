@@ -1,5 +1,6 @@
 package modelos;
 
 public enum TipoContrato {
-    PRACTICAS, TEMPORAL, OBRAYSERVICIO, INDEFINIDO
+    PRACTICAS, TEMPORAL,
+    OBRAYSERVICIO , INDEFINIDO
 }

@@ -1,5 +1,6 @@
 package modelos;
 
 public enum TipoEmpresa {
-    PYME, STARTUP, NACIONAL, MULTINACIONAL
+    PYME, STARTUP, NACIONAL,
+    MULTINACIONAL
 }
