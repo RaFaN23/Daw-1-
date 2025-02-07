@@ -124,4 +124,8 @@ public class Empleado {
                 ", contrato=" + contrato +
                 '}';
     }
+
+    public int getSalario() {
+        return 0;
+    }
 }
