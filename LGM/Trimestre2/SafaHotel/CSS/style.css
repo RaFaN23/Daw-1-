@@ -72,3 +72,12 @@ font-family:Georgia, 'Times New Roman', Times, serif;
     margin-left: 40px;
     margin-right: 40px;
 }
+
+.button-direct{
+    background-color: #6743a5;
+}
+
+.carousel-control-prev-icon, 
+.carousel-control-next-icon {
+    background-color: #6743a5 !important;
+}
