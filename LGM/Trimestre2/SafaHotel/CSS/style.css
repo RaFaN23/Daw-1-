@@ -9,7 +9,12 @@ font-family:Georgia, 'Times New Roman', Times, serif;
     align-items: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
 }
-
+#navbarTogglerDemo01{
+    gap: 20%;
+}
+.container-fluid{
+    max-height: 110px;
+}
 .search-input {
     border: none;
     background: transparent;
@@ -80,4 +85,15 @@ font-family:Georgia, 'Times New Roman', Times, serif;
 .carousel-control-prev-icon, 
 .carousel-control-next-icon {
     background-color: #6743a5 !important;
+}
+
+
+.card-body3{
+    background-color: #6743a5;
+    border-color:#6743a5;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-height: 5%;
+    text-align: center;
 }

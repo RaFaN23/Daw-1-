@@ -1,0 +1,103 @@
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    .search-bar {
+        background-color: #f4f1f8; 
+        border-radius: 30px; 
+        padding: 5px 15px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    }
+    #navbarTogglerDemo01{
+        gap: 20%;
+    }
+    .container-fluid{
+        max-height: 110px;
+    }
+    .search-input {
+        border: none;
+        background: transparent;
+        outline: none;
+        flex: 1;
+        font-size: 16px;
+        color: #333; 
+    }
+    
+    .search-input::placeholder {
+        color: #8a8a8a; 
+    }
+    
+    .btn{
+        background-color:#6743a5;
+        border-color:#6743a5;
+    }
+    
+    .btn:hover{
+        background-color: #6743a5;
+        border-color:#6743a5
+    }
+    
+    .card-body1{
+        background-color: #6743a5;
+        border-color:#6743a5;
+        color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 35px;
+        text-align: center;
+    }
+    
+    .h2-inicio{
+        color: #6743a5;
+        text-align: center;
+        margin-top: 25px;
+    }
+    
+    .card-body2{
+        background-color: #6743a5;
+        border-color:#6743a5;
+        color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    
+        text-align: center;
+    }
+    
+    .p1{
+        font-size: 25px;
+    }
+    .p2{
+        font-size: 20px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    .h4-1{
+        color: #6743a5;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    
+    .button-direct{
+        background-color: #6743a5;
+    }
+    
+    .carousel-control-prev-icon, 
+    .carousel-control-next-icon {
+        background-color: #6743a5 !important;
+    }
+    
+    
+    .card-body3{
+        background-color: #6743a5;
+        border-color:#6743a5;
+        color: white;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        max-height: 5%;
+        text-align: center;
+    }
+
+    .img2{
+        max-width: 80px;
+    }
