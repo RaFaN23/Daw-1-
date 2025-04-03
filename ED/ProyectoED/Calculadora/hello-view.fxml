@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.calculadora.HelloController">
+   <children>
+      <Button fx:id="boton_operar" layoutX="248.0" layoutY="247.0" mnemonicParsing="false" onAction="#boton_operar_on" text="Operar" />
+      <Label layoutX="113.0" layoutY="93.0" text="Operardor 1" />
+      <Label layoutX="115.0" layoutY="132.0" text="Operador 2" />
+      <Label layoutX="131.0" layoutY="296.0" text="Resultado" />
+      <TextField fx:id="operador_1_textfield" layoutX="215.0" layoutY="81.0" />
+      <TextField fx:id="operador_2_textfield" layoutX="215.0" layoutY="128.0" />
+      <TextField fx:id="resultado_textfield" layoutX="215.0" layoutY="292.0" />
+      <RadioButton fx:id="sumar_radiobutton" layoutX="190.0" layoutY="179.0" mnemonicParsing="false" onAction="#sumar_radiobutton_on" text="Suma" />
+      <RadioButton fx:id="multiplicacion_radiobutton" layoutX="283.0" layoutY="179.0" mnemonicParsing="false" onAction="#multiplicacion_radiobutton_on" text="Multiplicacion" />
+      <RadioButton fx:id="restar_radiobutton" layoutX="190.0" layoutY="211.0" mnemonicParsing="false" onAction="#restar_radiobutton_on" text="Resta" />
+      <RadioButton fx:id="division_radiobutton" layoutX="284.0" layoutY="211.0" mnemonicParsing="false" onAction="#division_radiobutton_on" text="Division" />
+   </children>
+</Pane>
