@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="420.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.control_personas3.HelloController">
+    <children>
+        <Label layoutX="55.0" layoutY="57.0" text="Nombre" />
+        <Label layoutX="56.0" layoutY="135.0" text="Apellidos" />
+        <Label layoutX="56.0" layoutY="210.0" text="Edad" />
+
+        <TextField fx:id="nombre_textfield" layoutX="53.0" layoutY="85.0" />
+        <TextField fx:id="apellidos_textfield" layoutX="53.0" layoutY="165.0" />
+        <TextField fx:id="edad_textfield" layoutX="53.0" layoutY="240.0" />
+
+        <Button fx:id="boton_agregar" layoutX="53.0" layoutY="287.0" mnemonicParsing="false" onAction="#abrirVentanaAgregarPersona" text="Abrir Agregar" />
+        <Button fx:id="boton_modificar" layoutX="281.0" layoutY="375.0" mnemonicParsing="false" onAction="#boton_modificar_on" text="Modificar" />
+        <Button fx:id="boton_eliminar" layoutX="455.0" layoutY="375.0" mnemonicParsing="false" onAction="#boton_eliminar_on" text="Eliminar" />
+
+        <TableView fx:id="tabla_registrarse" layoutX="212.0" layoutY="44.0" prefHeight="322.0" prefWidth="374.0">
+            <columns>
+                <TableColumn fx:id="columna_nombre" prefWidth="130.0" text="Nombre" />
+                <TableColumn fx:id="columna_apellidos" prefWidth="158.0" text="Apellidos" />
+                <TableColumn fx:id="columna_edad" prefWidth="85.0" text="Edad" />
+            </columns>
+        </TableView>
+    </children>
+</Pane>

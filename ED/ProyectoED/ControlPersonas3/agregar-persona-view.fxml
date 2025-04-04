@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.control_personas3.AgregarPersonaController">
+    <children>
+        <Label layoutX="38.0" layoutY="40.0" text="Nombre:" />
+        <TextField fx:id="nombre_textfield" layoutX="120.0" layoutY="35.0" prefWidth="200.0"/>
+
+        <Label layoutX="38.0" layoutY="100.0" text="Apellidos:" />
+        <TextField fx:id="apellidos_textfield" layoutX="120.0" layoutY="95.0" prefWidth="200.0"/>
+
+        <Label layoutX="38.0" layoutY="160.0" text="Edad:" />
+        <TextField fx:id="edad_textfield" layoutX="120.0" layoutY="155.0" prefWidth="200.0"/>
+
+        <Button text="Guardar" layoutX="90.0" layoutY="220.0" onAction="#guardarPersona" />
+        <Button text="Cancelar" layoutX="200.0" layoutY="220.0" onAction="#cancelar" />
+    </children>
+</Pane>
