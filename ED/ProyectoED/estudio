@@ -85,23 +85,32 @@ public class TiendaPescaGUI extends JFrame {
         });
     }
 
+     @FXML
     private void guardarSeñuelo() {
-        try {
-            String sql = "INSERT INTO Señuelo (modelo, tamaño, color, tipo) VALUES (?, ?, ?, ?)";
-            PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setString(1, txtModelo.getText());
-            ps.setString(2, txtTamaño.getText());
-            ps.setString(3, txtColor.getText());
-            ps.setString(4, txtTipo.getText());
-            ps.executeUpdate();
-            JOptionPane.showMessageDialog(this, "Señuelo guardado correctamente");
-            loadModelos();
-            loadTableData(null, null);
-            limpiarCampos();
-        } catch (SQLException e) {
+        try (Connection conn = conexionDB.conectar()) {
+            String sql = "INSERT INTO Señuelo (referencia, modelo, tamaño, color, ojos, pvp, disponibilidad, navegabilidad, fecha, peso) " +
+                    "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setString(1, Textfield_referencia.getText());
+            stmt.setString(2, Textfield_modelo.getText());
+            stmt.setString(3, Combobox_tamaño.getValue().toString());
+            stmt.setString(4, Textfield_color.getText());
+            stmt.setString(5, Textfield_ojos.getText());
+            stmt.setDouble(6, Double.parseDouble(Textfield_pvp.getText()));
+            stmt.setString(7, Textfield_disponibilidad.getText());
+            stmt.setString(8, Texfield_navegabilidad.getText());
+            stmt.setDate(9, java.sql.Date.valueOf(Datepicker_fecha.getValue()));
+            stmt.setDouble(10, Double.parseDouble(Textfield_peso.getText()));
+
+            stmt.executeUpdate();
+            System.out.println("¡Señuelo guardado con éxito!");
+
+        } catch (Exception e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(this, "Error al guardar");
         }
+    }
+
     }
 
     private void limpiarCampos() {
