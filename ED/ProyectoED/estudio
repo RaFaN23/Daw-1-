@@ -1,0 +1,156 @@
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
+import java.awt.*;
+import java.awt.event.*;
+import java.sql.*;
+import java.util.Vector;
+
+public class TiendaPescaGUI extends JFrame {
+    JComboBox<String> comboBoxModelo;
+    JTextField txtModelo, txtTamaño, txtColor, txtTipo;
+    JButton btnGuardar, btnNuevo, btnFiltrar;
+    JTable table;
+    DefaultTableModel tableModel;
+
+    Connection conn;
+
+    public TiendaPescaGUI() {
+        setTitle("Tienda de Pesca - El Golfo de Cádiz");
+        setSize(800, 500);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+
+        connectDB();
+        initUI();
+        loadModelos();
+        loadTableData(null, null);
+    }
+
+    private void connectDB() {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost/TiendaPesca", "root", ""); // Ajusta tu contraseña
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Error de conexión");
+        }
+    }
+
+    private void initUI() {
+        setLayout(new BorderLayout());
+
+        // Panel superior
+        JPanel topPanel = new JPanel(new GridLayout(5, 2));
+        topPanel.setBorder(BorderFactory.createTitledBorder("Gestión Señuelos"));
+
+        comboBoxModelo = new JComboBox<>();
+        txtModelo = new JTextField();
+        txtTamaño = new JTextField();
+        txtColor = new JTextField();
+        txtTipo = new JTextField();
+        btnGuardar = new JButton("Guardar");
+        btnNuevo = new JButton("Nuevo");
+        btnFiltrar = new JButton("Filtrar");
+
+        topPanel.add(new JLabel("Modelo:"));
+        topPanel.add(txtModelo);
+        topPanel.add(new JLabel("Tamaño:"));
+        topPanel.add(txtTamaño);
+        topPanel.add(new JLabel("Color:"));
+        topPanel.add(txtColor);
+        topPanel.add(new JLabel("Tipo:"));
+        topPanel.add(txtTipo);
+        topPanel.add(btnGuardar);
+        topPanel.add(btnNuevo);
+
+        add(topPanel, BorderLayout.NORTH);
+
+        // Tabla
+        tableModel = new DefaultTableModel(new String[]{"ID", "Modelo", "Tamaño", "Color", "Tipo"}, 0);
+        table = new JTable(tableModel);
+        add(new JScrollPane(table), BorderLayout.CENTER);
+
+        // Panel inferior
+        JPanel bottomPanel = new JPanel();
+        bottomPanel.add(new JLabel("Filtrar por modelo:"));
+        bottomPanel.add(comboBoxModelo);
+        bottomPanel.add(btnFiltrar);
+        add(bottomPanel, BorderLayout.SOUTH);
+
+        btnGuardar.addActionListener(e -> guardarSeñuelo());
+        btnNuevo.addActionListener(e -> limpiarCampos());
+        btnFiltrar.addActionListener(e -> {
+            String modelo = (String) comboBoxModelo.getSelectedItem();
+            loadTableData(modelo, null);
+        });
+    }
+
+    private void guardarSeñuelo() {
+        try {
+            String sql = "INSERT INTO Señuelo (modelo, tamaño, color, tipo) VALUES (?, ?, ?, ?)";
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, txtModelo.getText());
+            ps.setString(2, txtTamaño.getText());
+            ps.setString(3, txtColor.getText());
+            ps.setString(4, txtTipo.getText());
+            ps.executeUpdate();
+            JOptionPane.showMessageDialog(this, "Señuelo guardado correctamente");
+            loadModelos();
+            loadTableData(null, null);
+            limpiarCampos();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Error al guardar");
+        }
+    }
+
+    private void limpiarCampos() {
+        txtModelo.setText("");
+        txtTamaño.setText("");
+        txtColor.setText("");
+        txtTipo.setText("");
+    }
+
+    private void loadModelos() {
+        try {
+            comboBoxModelo.removeAllItems();
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT DISTINCT modelo FROM Señuelo");
+            while (rs.next()) {
+                comboBoxModelo.addItem(rs.getString("modelo"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void loadTableData(String modelo, String tamaño) {
+        try {
+            tableModel.setRowCount(0);
+            String sql = "SELECT * FROM Señuelo";
+            if (modelo != null) {
+                sql += " WHERE modelo = ?";
+            }
+            PreparedStatement ps = conn.prepareStatement(sql);
+            if (modelo != null) {
+                ps.setString(1, modelo);
+            }
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Vector<String> row = new Vector<>();
+                row.add(String.valueOf(rs.getInt("id")));
+                row.add(rs.getString("modelo"));
+                row.add(rs.getString("tamaño"));
+                row.add(rs.getString("color"));
+                row.add(rs.getString("tipo"));
+                tableModel.addRow(row);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> new TiendaPescaGUI().setVisible(true));
+    }
+}
