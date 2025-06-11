@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.practica.HelloController">
+   <children>
+      <Button fx:id="boton_guardar" layoutX="274.0" layoutY="300.0" mnemonicParsing="false"
+              text="Guardar" onAction="#onGuardarClick" />
+      <TextField fx:id="text_modelo" layoutX="61.0" layoutY="82.0" />
+      <TextField fx:id="text_color" layoutX="61.0" layoutY="150.0" />
+      <TextField fx:id="text_ojos" layoutX="61.0" layoutY="206.0" />
+      <TextField fx:id="text_referencia" layoutX="61.0" layoutY="271.0" />
+      <ComboBox fx:id="combobox_tamanyo" layoutX="345.0" layoutY="82.0" prefWidth="150.0" />
+      <DatePicker fx:id="pick_fecha" layoutX="346.0" layoutY="271.0" />
+      <TextField fx:id="text_navegabilidad" layoutX="346.0" layoutY="150.0" />
+      <TextField fx:id="text_peso" layoutX="346.0" layoutY="200.0" prefHeight="25.0" prefWidth="41.0" />
+      <TextField fx:id="text_disponibilidad" layoutX="400.0" layoutY="200.0" prefHeight="25.0" prefWidth="83.0" />
+      <TextField fx:id="text_pvp" layoutX="499.0" layoutY="200.0" prefHeight="25.0" prefWidth="41.0" />
+      <Label layoutX="61.0" layoutY="56.0" text="Modelo" />
+      <Label layoutX="61.0" layoutY="124.0" text="Color" />
+      <Label layoutX="61.0" layoutY="184.0" prefHeight="25.0" prefWidth="28.0" text="Ojos" />
+      <Label layoutX="61.0" layoutY="248.0" text="Referencia" />
+      <Label layoutX="353.0" layoutY="56.0" text="Tamaño" />
+      <Label layoutX="353.0" layoutY="124.0" text="Navegabilidad" />
+      <Label layoutX="346.0" layoutY="176.0" text="Peso" />
+      <Label layoutX="406.0" layoutY="176.0" text="Disponibilidad" />
+      <Label layoutX="499.0" layoutY="176.0" text="P:V.P" />
+      <Label layoutX="346.0" layoutY="248.0" text="Fecha de reparacion" />
+   </children>
+</Pane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="672.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.practica.Tabla">
+
+    <children>
+        <Button fx:id="boton_tabla" layoutX="544.0" layoutY="65.0" text="nuevo" />
+        <TextField fx:id="modelo_tabla" layoutX="69.0" layoutY="65.0" />
+        <ComboBox fx:id="combobox_tabla" layoutX="322.0" layoutY="65.0" prefWidth="150.0" />
+
+        <TableView fx:id="tablaSenuelos" layoutX="14.0" layoutY="119.0" prefHeight="200.0" prefWidth="657.0">
+            <columns>
+                <TableColumn fx:id="colModelo" prefWidth="75.0" text="Modelo" />
+                <TableColumn fx:id="colTamanyo" prefWidth="75.0" text="Tamaño" />
+                <TableColumn fx:id="colColor" prefWidth="75.0" text="Color" />
+                <TableColumn fx:id="colNavegabilidad" prefWidth="75.0" text="Navegabilidad" />
+                <TableColumn fx:id="colOjos" prefWidth="75.0" text="Ojos" />
+                <TableColumn fx:id="colPeso" prefWidth="75.0" text="Peso" />
+                <TableColumn fx:id="colDisponibilidad" prefWidth="75.0" text="Disponibilidad" />
+                <TableColumn fx:id="colPVP" prefWidth="75.0" text="PVP" />
+                <TableColumn fx:id="colReferencia" prefWidth="75.0" text="Referencia" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
