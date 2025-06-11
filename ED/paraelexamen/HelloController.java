@@ -14,6 +14,28 @@ import java.time.LocalDate;
 
 public class HelloController {
 
+
+
+
+
+// CREATE TABLE Señuelo (
+//     referencia VARCHAR2(50) PRIMARY KEY,
+//     modelo VARCHAR2(100),
+//     tamaño VARCHAR2(50),
+//     color VARCHAR2(50),
+//     ojos VARCHAR2(50),
+//     pvp NUMBER(10, 2),
+//     disponibilidad VARCHAR2(50),
+//     navegabilidad VARCHAR2(50),
+//     fecha DATE,
+//     peso NUMBER(10, 2)
+// );
+
+
+
+
+
+    
     @FXML
     private TextField text_navegabilidad;
 
