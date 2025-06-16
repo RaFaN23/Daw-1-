@@ -135,6 +135,62 @@ ORDER BY t.alumno;
 
 
 
+--Ejercicio 1 modelo 2
+select * from (select p.nombre||' '||p.titulacion as profesor,asig.nombre
+from profesores p
+join profesores_centros_asignaturas pca on (pca.id_profesor=p.id)
+join asignaturas asig on (asig.id=pca.id_asignatura)
+where pca.id_centro = 2 
+order by 1)
+where rownum <=4;
+
+
+--Ejercicio 2 modelo 2
+select a.nombre as NOMBRE, upper(a.apellidos) as APELLIDOS,Trunc(MONTHS_BETWEEN(SYSDATE,a.fecha_nacimiento))as EDAD_MESES
+from alumnos a;
+
+
+--Ejercicio 3 modelo 2
+
+INSERT INTO profesores (nombre, titulacion) VALUES ('ivan', 'Doctora ');
+INSERT INTO profesores (nombre, titulacion) VALUES ('Danie', 'Graduado en  Hispánica');
+INSERT INTO profesores (nombre, titulacion) VALUES ('López', 'Doctora en Filo');
+
+
+
+
+
+
+--Ejercicio 4 modelo 2 
+CREATE VIEW vista_canciones_sin_i AS
+SELECT titulo, artista
+FROM canciones
+
+EXCEPT
+
+SELECT titulo, artista
+FROM canciones
+WHERE artista LIKE '%i%' OR artista LIKE '%I%';
+
+SELECT *
+FROM vista_canciones_sin_i
+ORDER BY LENGTH(REPLACE(titulo, ' ', ''));
+
+
+
+--Ejercicio 5 modelo 2 
+
+
+select p.nombre, p.titulacion , a.nombre ,COUNT(CASE WHEN aa.nota < 5 THEN 1 END) AS SUSPENSOS
+from profesores p 
+join profesores_centros_asignaturas pca on (p.id=pca.id_profesor)
+join asignaturas a on (a.id=pca.id_asignatura)
+left join alumnos_asignaturas aa on (aa.id_asignatura=a.id)
+group by p.nombre ,p.titulacion, a.nombre
+order by p.nombre DESC
+;
+
+
 
 
 
